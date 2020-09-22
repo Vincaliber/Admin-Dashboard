@@ -1,0 +1,547 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IMPEKABLE</title>
+    <link
+      rel="icon"
+      href="./images/favicon.png"
+      type="image/png"
+      sizes="16x16"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Latest compiled and minified CSS -->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/index.css" />
+  </head>
+
+  <body>
+    <div class="loader"></div>
+
+    <div class="wrapper" id="bodyContent">
+      <div class="row row-offcanvas row-offcanvas-left wrapper-row1">
+        <!-- sidebar -->
+        <div
+          class="column1 col-sm-3 col-xs-1 col-lg-3 sidebar-offcanvas"
+          id="sidebar"
+        >
+          <ul class="nav nav-pills nav-stacked">
+            <li>
+              <span class="collapse in" id="nav-title">IMPEKABLE</span>
+            </li>
+            <li onclick="showTabContent('home','homeImg')">
+              <a href="#home" data-toggle="tab"
+                ><img src="./images/home-icon.png" alt="homeImg" id="homeImg" />
+                <span class="collapse in hidden-xs"> Home</span></a
+              >
+            </li>
+            <li class="active" onclick="showTabContent('dashboard','dashboardImg')">
+              <a href="#dashboard" data-toggle="tab"
+                ><img src="./images/graph.png" alt="dashboardImg" id="dashboardImg" />
+                <span class="collapse in hidden-xs">Dashboard</span></a
+              >
+            </li>
+            <li onclick="showTabContent('inbox','inboxImg')">
+              <a href="#inbox" data-toggle="tab"
+                ><img src="./images/mail.png" alt="inboxImg" id="inboxImg" />
+                <span class="collapse in hidden-xs"
+                  >Inbox <span class="new">New</span></span
+                ></a
+              >
+            </li>
+            <li onclick="showTabContent('products','productsImg')">
+              <a href="#products" data-toggle="tab"
+                ><img
+                  src="./images/graph-inverted.png"
+                  alt="productsImg"
+                  id="productsImg"
+                />
+                <span class="collapse in hidden-xs">Products</span></a
+              >
+            </li>
+          </ul>
+        </div>
+        <!-- /sidebar -->
+
+        <!-- main right col -->
+        <div class="column2 col-sm-9 col-xs-11 col-lg-9" style="padding: 0">
+          <div id="main">
+            <div class="row wrapper-row2">
+              <div class="container">
+                <div class="col-lg-1 col-md-3 col-xs-12 mb10">
+                  <div id="hamMenu">
+                    <a href="#" data-toggle="offcanvas" id="hamBtn">
+                      <img src="./images/ham.png" alt="ham" />
+                    </a>
+                  </div>
+                </div>
+                <div class="col-lg-8 col-md-4 col-xs-12 mb10">
+                  <div id="search">
+                    <input
+                      type="search"
+                      name=""
+                      id="search1"
+                      placeholder="Search transactions, invoices or help"
+                    />
+                  </div>
+                </div>
+                <div class="col-lg-3 col-md-4 col-xs-12 mb10">
+                  <div class="row">
+                    <div class="bell">
+                      <a href="" id="bellBtn">
+                        <img
+                          src="./images/bell-icon.jpg"
+                          alt="bellIcon"
+                          class="img-responsive"
+                          id="bellIcon"
+                        />
+                        <span
+                          class="bell-notification"
+                          id="bell-notification"
+                        ></span>
+                      </a>
+                      <div id="bellNotificationDiv">
+                        <ul id="notifyDiv">
+                          <li>New message is received</li>
+                        </ul>
+                      </div>
+                    </div>
+
+                    <div class="dropdown dropdown1">
+                      <a
+                        class="btn dropdown-toggle"
+                        id="menu1"
+                        type="button"
+                        data-toggle="dropdown"
+                        ><span>
+                          John Doe
+                          <img src="./images/down-arrow-icon.jpg" alt="down-arrow-icon" />
+                        </span>
+                      </a>
+                      <img src="./images/Lavid Emes.png" alt="john-doe" id="john-doe" />
+                      <ul
+                        class="dropdown-menu"
+                        role="menu"
+                        aria-labelledby="menu1"
+                      >
+                        <li role="presentation">
+                          <a role="menuitem" tabindex="-1" href="#"
+                            >description</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div class="row" id="divDesc">
+              <div class="container">
+                <!--tab content Description-->
+                <div class="row">
+                  <div class="tab-content">
+                    <!--home content Description-->
+                    <div id="home" class="tab-pane">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h3>Home</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--home content Description-->
+
+                    <!--dashboard content Description-->
+                    <div id="dashboard" class="tab-pane in active">
+                      <div class="row">
+                        <div class="col-lg-10 col-xs-6">
+                          <h3>Overview</h3>
+                        </div>
+                        <div class="col-lg-2 col-xs-6 text-right">
+                          <!-- Trigger the modal with a button -->
+                          <button
+                            id="addFunds"
+                            data-toggle="modal"
+                            data-target="#myModal"
+                          >
+                            Add Funds &nbsp;<span
+                              ><img src="./images/add.png" alt="add"
+                            /></span>
+                          </button>
+                        </div>
+                      </div>
+
+                      <div class="row mt30">
+                        <div class="col-lg-8">
+                          <div class="row">
+                            <div class="col-lg-6 mb30">
+                              <div class="statistics-salesRow">
+                                <div class="stats1">
+                                  <div class="statistics-heading">
+                                    <h4>Statistics</h4>
+                                  </div>
+
+                                  <div class="dropdown dropdown2">
+                                    <select
+                                      id="changeStatsBtn"
+                                      class="btn btn-default"
+                                    >
+                                      <option value="Last 6 months">
+                                        Last 6 months
+                                      </option>
+                                      <option value="Last 4 months">
+                                        Last 4 months
+                                      </option>
+                                      <option value="Last 2 months">
+                                        Last 2 months
+                                      </option>
+                                    </select>
+                                  </div>
+                                </div>
+                                <div class="stats2">
+                                  <img
+                                    id="line-graph"
+                                    src="./images/line-graph1.png"
+                                    alt="line-graph"
+                                    class="img-responsive line-graph"
+                                  />
+                                </div>
+                              </div>
+                            </div>
+                            <div class="col-lg-6 mb30">
+                              <div class="statistics-salesRow">
+                                <div class="sales-heading">
+                                  <h4>Sales Distribution</h4>
+                                </div>
+                                <div class="sales-piechart">
+                                  <img
+                                    src="./images/pie-chart.png"
+                                    alt="line-graph"
+                                    class="img-responsive"
+                                  />
+                                  <hr />
+                                  <div class="row mb10">
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="blue-circle circle"></span>
+                                      <span class="fontSize12">France</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="fontSize12">4260 sales</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="orange-circle circle"></span>
+                                      <span class="fontSize12">France</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="fontSize12">4260 sales</span>
+                                    </div>
+                                  </div>
+                                  <div class="row">
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="red-circle circle"></span>
+                                      <span class="fontSize12">Italy</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="fontSize12">3970 sales</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="green-circle circle"></span>
+                                      <span class="fontSize12">Italy</span>
+                                    </div>
+                                    <div class="col-lg-3 col-xs-3">
+                                      <span class="fontSize12">3970 sales</span>
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mb30 p15">
+                            <div class="table-referrer">
+                              <div class="table-heading">
+                                <h4>Referrer</h4>
+                              </div>
+                              <table class="table table-hover" id="table">
+                                <thead>
+                                  <tr>
+                                    <th>LOCATION</th>
+                                    <th>VIEWS</th>
+                                    <th>SALES</th>
+                                    <th>CONVERSION</th>
+                                    <th>TOTAL</th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr>
+                                    <td>facebook.com</td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19291</td>
+                                  </tr>
+                                  <tr>
+                                    <td>twitter.com</td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19291</td>
+                                  </tr>
+                                  <tr>
+                                    <td>Direct, email, IM</td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19291</td>
+                                  </tr>
+                                  <tr>
+                                    <td>linkedin.com</td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19291</td>
+                                  </tr>
+                                  <tr>
+                                    <td>google.com</td>
+                                    <td>3746</td>
+                                    <td>752</td>
+                                    <td>43%</td>
+                                    <td>$19291</td>
+                                  </tr>
+                                </tbody>
+                              </table>
+                              <div class="showMore">
+                                <a href="#" id="showMore">Show More</a>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="col-lg-4">
+                          <!--nick-section-->
+                          <div class="row p15 pt0">
+                            <div class="nick">
+                              <div class="nick-img">
+                                <img
+                                  src="./images/Jana Navakova.jpg"
+                                  alt="Jana Navakova"
+                                  class="img-responsive img-circle"
+                                  style="margin: 0 auto"
+                                />
+                                <img
+                                  src="./images/diagonal.png"
+                                  class="editNickImage img-responsive"
+                                  alt="diagonal"
+                                />
+                                <br />
+                                <h4 style="font-weight: bold">
+                                  Nick Herasimenka
+                                </h4>
+                                <p>United States</p>
+                              </div>
+                              <div class="social-icons">
+                                <div class="row">
+                                  <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <div class="mail">
+                                      <img src="./images/mail.jpg" alt="mail" />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <div class="mail">
+                                      <img src="./images/mail.jpg" alt="mail" />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <div class="mail">
+                                      <img src="./images/mail.jpg" alt="mail" />
+                                    </div>
+                                  </div>
+                                  <div class="col-lg-3 col-md-3 col-xs-3">
+                                    <div class="mail">
+                                      <img src="./images/mail.jpg" alt="mail" />
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                              <hr />
+                              <div class="ourusers">
+                                <div class="col-lg-6 col-xs-6">
+                                  <h4 class="text-left">Our Users</h4>
+                                </div>
+                                <div class="col-lg-6 col-xs-6 text-right">
+                                  <img
+                                    src="./images/dots.jpg"
+                                    alt="dots"
+                                    class="dots"
+                                  />
+                                </div>
+                              </div>
+                              <div class="ourusers-list">
+                                <div class="container2">
+                                  <div>
+                                    <img
+                                      src="./images/Drew James.png"
+                                      class="iconDetails"
+                                      alt="Drew James"
+                                    />
+                                  </div>
+                                  <div>
+                                    <h4>Drew James</h4>
+                                    <div style="font-size: 12px">
+                                      United States &nbsp; Mob: 123456789
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="container2">
+                                  <div>
+                                    <img
+                                      src="./images/Bavid kames.png"
+                                      class="iconDetails"
+                                      alt="Bavid kames"
+                                    />
+                                  </div>
+                                  <div>
+                                    <h4>Bavid Kames</h4>
+                                    <div style="font-size: 12px">
+                                      United States &nbsp; Mob: 123456789
+                                    </div>
+                                  </div>
+                                </div>
+                                <div class="container2">
+                                  <div>
+                                    <img
+                                      src="./images/Lavid Emes.png"
+                                      class="iconDetails"
+                                      alt="Lavid Emes"
+                                    />
+                                  </div>
+                                  <div>
+                                    <h4>Lavid Emes</h4>
+                                    <div style="font-size: 12px">
+                                      United States &nbsp; Mob: 123456789
+                                    </div>
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="row mt30 p15 pt0">
+                            <div class="products-video-section">
+                              <!--video section-->
+                              <div class="row">
+                                <div class="col-lg-6 col-xs-6">
+                                  <h4 class="text-left">Product Video</h4>
+                                </div>
+                                <div class="col-lg-6 col-xs-6 text-right">
+                                  <img
+                                    src="./images/dots.jpg"
+                                    alt="dots"
+                                    class="dots"
+                                  />
+                                </div>
+                              </div>
+                              <div class="row">
+                                <div class="video-wrapper video-section">
+                                  <video class="video">
+                                    <source
+                                      src="./video/videoplayback.mp4"
+                                      type="video/mp4"
+                                    />
+                                  </video>
+                                  <div class="playpause"></div>
+                                </div>
+                              </div>
+                            </div>
+
+                            <!--video section-->
+                          </div>
+                          <!--nick-section-->
+                        </div>
+                      </div>
+                    </div>
+                    <!--dashboard content Description-->
+
+                    <!--inbox content Description-->
+                    <div id="inbox" class="tab-pane">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h3>Inbox</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--inbox content Description-->
+
+                    <!--products content Description-->
+                    <div id="products" class="tab-pane">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <h3>Products</h3>
+                          <p>
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit, sed do eiusmod tempor incididunt ut labore et
+                            dolore magna aliqua.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                    <!--products content Description-->
+                  </div>
+                </div>
+                <!--tab content Description-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- /main -->
+      </div>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" role="dialog">
+      <div class="modal-dialog">
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal">
+              &times;
+            </button>
+            <h4 class="modal-title">Modal Header</h4>
+          </div>
+          <div class="modal-body">
+            <p>Some text in the modal.</p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">
+              Close
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="./js/index2.js"></script>
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
